@@ -5,7 +5,23 @@ const { Category, Product } = require('../../models');
 
 router.get('/', (req, res) => {
   // find all categories
-  // be sure to include its associated Products
+  Category.findAll(
+    {
+      attributes: ['id', 'category_name'],
+       // be sure to include its associated Products
+      incude: [
+        {
+          model: Product,
+          attributes: ['id', 'product_name', 'price', 'stock', 'ctaegory_id']
+        }
+      ]
+    }
+  )
+  .then(dbCategoryData => res.json(dbCategoryData))
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 router.get('/:id', (req, res) => {
@@ -23,6 +39,22 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete a category by its `id` value
+  Category.destroy({
+    where: {
+      id: req.params.id
+    }
+  })
+  .then(dbCategoryDaya => {
+    if(!dbCategoryData) {
+      res.status(404).json({message: 'No Category Found Under That Id'});
+      return;
+    }
+    res.json(dbCategoryData);
+  })
+  .catch(err => {
+    console.log(err);
+    res.status(500).json(err);
+  });
 });
 
 module.exports = router;
