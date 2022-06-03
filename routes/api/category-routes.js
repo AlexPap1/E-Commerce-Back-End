@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
       incude: [
         {
           model: Product,
-          attributes: ['id', 'product_name', 'price', 'stock', 'ctaegory_id']
+          attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
         }
       ]
     }

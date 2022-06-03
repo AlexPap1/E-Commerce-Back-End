@@ -13,7 +13,7 @@ router.get('/', (req, res) => {
       include: [
         {
           model: Product,
-          attributes: ['id', 'product_name', 'price', 'stock', 'ctaegory_id'],
+          attributes: ['id', 'product_name', 'price', 'stock', 'category_id'],
         }
       ]
     }
@@ -58,7 +58,7 @@ router.post('/', (req, res) => {
     id: req.body.id,
     tag_name: req.body.tag_name
   })
-  .then(dbTagData => reset.json(dbTagData))
+  .then(dbTagData => res.json(dbTagData))
   .catch(err => {
     console.log(err);
     res.status(500).json(err);
@@ -87,7 +87,7 @@ router.put('/:id', (req, res) => {
 
 router.delete('/:id', (req, res) => {
   // delete on tag by its `id` value
-  Tag.destory({
+  Tag.destroy({
     where: {
       id: req.params.id
     }
