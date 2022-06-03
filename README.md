@@ -45,12 +45,19 @@ Express, Sequelize, MySql2
 ## ⚙️ Usage ⚙️
 <br />
 
-![](Tutorial/Part_1_Setup.mp4)
-![](Tutorial/Part_2_Get_All.mp4)
-![](Tutorial/Part_3_Get_1.mp4)
-![](Tutorial/Part_4_Post.mp4)
-![](Tutorial/Part_5_Put.mp4)
-![](Tutorial/Part_6_Delete.mp4)
+Part 1: Setup
+https://user-images.githubusercontent.com/99618057/171774864-acb24d56-ec9e-4421-881c-964ada842c48.mp4
+Part 2: Get All
+https://user-images.githubusercontent.com/99618057/171774879-8138e84f-4b90-4986-ba1a-2bbdf6e1cb26.mp4
+Part 3: Get One
+https://user-images.githubusercontent.com/99618057/171774899-f1bdccd7-883e-4231-a898-06ab71e6c684.mp4
+Part 4: Post
+https://user-images.githubusercontent.com/99618057/171774918-6117dc95-f9a3-4d5e-89e5-ac6b000f1d99.mp4
+Part 5: Put
+https://user-images.githubusercontent.com/99618057/171774934-34b259b0-7106-4f52-8130-8db8f498e1e1.mp4
+Part 6: Delete
+https://user-images.githubusercontent.com/99618057/171774968-0502dd60-becc-4af7-8c87-44b8aa916b03.mp4
+
 <br />
 
 ## 🤝 Contributors 🤝
